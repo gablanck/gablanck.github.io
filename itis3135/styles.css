@@ -1,5 +1,5 @@
 body {
-    background-color: #006400;
+    background-color: #001B3A;
     font-family: Courier New;
     padding: 20px;
     margin: 20px;
@@ -15,7 +15,26 @@ p {
     color: white;
 }
 
-footer {
+footer, ul {
     text-align: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+footer, ul, li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
     color: white;
 }
