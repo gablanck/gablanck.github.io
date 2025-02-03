@@ -33,6 +33,14 @@ footer {
     color: white;
 }
 
+img{
+    width: 60%;
+}
+
+figcaption {
+    color: whitesmoke;
+}
+
 b {
     color:#6B6E70;
     font-weight: 900;
