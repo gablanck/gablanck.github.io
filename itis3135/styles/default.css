@@ -1,24 +1,29 @@
 body {
-    background-color: #001B3A;
+    background-color: #222629;
     text-align: center;
-    font-family: Courier New;
+    font-family: arial;
+    font-weight: 800;
     padding: 20px;
     margin: 20px;
 }
 
 h1 {
-    font-size: 30px;
-    color: white;
+    font-size: 35px;
+    color: #86C232;
 }
 
 h2 {
     font-size: 25px;
-    color: white;
+    color: #86C232;
 }
 
 p {
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color: #6B6E70;
+}
+
+nav {
+    color: #474B4F;
 }
 
 footer, ul {
@@ -34,6 +39,7 @@ footer, ul, li {
 }
 
 a {
+    font-size: 15px;
     color: white;
 }
 
