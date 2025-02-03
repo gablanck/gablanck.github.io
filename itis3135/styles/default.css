@@ -1,5 +1,6 @@
 body {
     background-color: #001B3A;
+    text-align: center;
     font-family: Courier New;
     padding: 20px;
     margin: 20px;
@@ -42,4 +43,9 @@ a:hover {
 
 a:visited {
     color: white;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
 }
