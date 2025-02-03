@@ -34,11 +34,12 @@ footer {
 }
 
 img{
-    width: 60%;
+    width: 40%;
 }
 
 figcaption {
     color: whitesmoke;
+    font-style: italic;
 }
 
 b {
