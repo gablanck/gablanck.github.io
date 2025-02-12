@@ -3,27 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/scripts.js"></script>
     <title>Giant Shark Products</title>
     <style>
+        html {
+            width: 80%;
+        }
+
         body {
             background-color: #282C36;
             color: #F5F8F8;
         }
+
+        .logo {
+            width: 40%;
+            margin-bottom: 120px;;
+        }
+
+        a {
+            font-size: 20px;
+            color: #418BC6
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .icon {
+            width: 80px;
+            height: 60px;
+            
+        }
+        header {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 10;
+        }
+
+        nav {
+            text-align: center;
+        }
+        
+        .icon {
+            width: 80px;
+            height: 60px;
+            
+        }
+
+        header {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 10;
+        }
+
+        .title {
+            margin: 0;
+            padding: 0;
+            font-size: 48px;
+            font-family: cursive;
+            color: #F5F8F8;
+        }
+
+        .slogan {
+            font-size: 30px;
+            margin-top: 5px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
         li {
             padding-bottom: 10px;
         }
-        .logo {
-            width: 20%;
+
+        ul {
+            margin-bottom: 50px;
         }
-        a {
-            color: #418BC6
+
+        .intro {
+            font-size: 20px;
         }
-        img{
-            width: 20%;
+
+        h2 {
+            font-size: 25px;
         }
-        .icon {
-            width: 50px;
-            height: auto;
+
+        .text {
+            font-size: 18px;
+        }
+
+        table {
+            width: 50%;
+            border-collapse:  collapse;
+            text-align: center;
+            margin-bottom: 110px;
+        }
+
+        th, td {
+            border: 2px solid black ;;
+            padding: 10px;
+            color: black;
+        }
+
+        th {
+            background-color: #f4f4f4;
         }
         
 
@@ -31,16 +120,13 @@
 </head>
     <body>
         <header>
-            <img src="images\giantsharkIcon.png" alt="Icon" class="icon">
-            <h1>Giant Shark Outfitters</h1>
-            <h3 class="slogan"><i>Gear Up. Dive In, Adventure Awaits.</i></h3>
-            <nav>
-                <a href="./">Home</a> ||
-                <a href="about.html">About Us</a> ||
-                <a href="products.html">Products</a>
-            </nav>
+            <img src="../images\giantsharkIcon.png" alt="Icon" class="icon">
+            <h1 class="title">Giant Shark Outfitters</h1>
+            
+            
         </header>
         <main>
+            <h3 class="slogan"><i>Gear Up. Dive In, Adventure Awaits.</i></h3>
             <h2>Products</h2>
             <div class="intro">
                 <ul>
@@ -49,13 +135,35 @@
                     <li>Waterproof Watches</li>
                 </ul>
             </div>
-            
+            <div class="text">
+                <p>In need of diving gear? We have just what you need!</p>
+                <p>We offer both rentals and purchase options</p>
+            </div>
+            <div class="table">
+                <table border="1">
+                    <tr>
+                        <th>Options</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr>
+                        <th>Rent</th>
+                        <th>$50/day</th>
+                        <th>Up to a month</th>
+                    </tr>
+                    <tr>
+                        <th>Buy</th>
+                        <th>$1500</th>
+                        <th>Lifetime</th>
+                    </tr>
+                </table>
+            </div>
         </main>
         <footer>
             <nav>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
+                <a href="./">Home</a> ||
+                <a href="about.html">About Us</a> ||
+                <a href="products.html">Products</a>
             </nav>
         </footer>
         

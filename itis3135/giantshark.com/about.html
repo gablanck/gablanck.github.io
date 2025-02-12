@@ -3,27 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/scripts.js"></script>
     <title>Giant Shark About Page</title>
     <style>
+        html {
+            width: 80%;
+        }
+
         body {
-            background-color: #282C36;
+            background-color: #4E778F;
             color: #F5F8F8;
         }
+
         li {
             padding-bottom: 10px;
         }
-        .logo {
-            width: 20%;
+        
+        ul {
+            margin-bottom: 90px;
         }
+
+        nav {
+            text-align: center;
+        }
+        
         a {
-            color: #418BC6
+            font-size: 20px;
+            color: #2A2E31;
         }
-        img{
-            width: 20%;
+
+        a:hover {
+            color: white;
         }
-        .icon-pic {
-            width: 50px;
-            height: auto;
+
+        a:visited {
+            color: white;
+        }
+
+        .icon {
+            width: 80px;
+            height: 60px;
+            
+        }
+        header {
+            display: flex;
+            gap: 10px;
+            padding-bottom: 10;
+        }
+
+        .title {
+            margin: 0;
+            padding: 0;
+            font-size: 48px;
+            font-family: cursive;
+            color: #1C2022;
+        }
+
+        .slogan {
+            font-size: 30px;
+            margin-top: 5px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        .intro {
+            font-size: 20px;
+        }
+
+        .mission-statement {
+            text-align: left;
+            margin-bottom: 90px;
         }
         
 
@@ -31,15 +83,11 @@
 </head>
     <body>
         <header>
-            <h1>Giant Shark Outfitters</h1>
-            <h3 class="slogan"><i>Gear Up. Dive In, Adventure Awaits.</i></h3>
-            <nav>
-                <a href="./">Home</a> ||
-                <a href="about.html">About Us</a> ||
-                <a href="products.html">Products</a>
-            </nav>
+            <img src="../images\giantsharkIcon.png" alt="Icon" class="icon">
+            <h1 class="title">Giant Shark Outfitters</h1>
         </header>
         <main>
+            <h3 class="slogan"><i>Gear Up. Dive In, Adventure Awaits.</i></h3>  
             <h2>About Us</h2>
             <div class="intro">
                 <p>Here at Giant Shark we sell outdoor gear and equipment.</p>
@@ -50,13 +98,19 @@
                     <li>Waterproof Watches</li>
                 </ul>
             </div>
-            
+            <div class="intro">
+                <p class="mission-statement">At Great Shark Outfitters, we equip adventures with high-quality, 
+                durable gear to withstand the toughest outdoor conditions. Whether you're diving into the depths, 
+                hiking rough terrain, or exploring the unknown, our mission is to provide reliable equipment that enahnces 
+                your journey. We are committed to innovation, sustainnability, and helping every explorer to push beyond their limits. 
+                Adventure awaits!</p>
+            </div>
         </main>
         <footer>
             <nav>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
+                <a href="./">Home</a> ||
+                <a href="about.html">About Us</a> ||
+                <a href="products.html">Products</a>
             </nav>
         </footer>
         
