@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/scripts.js"></script>
+    <title>gablanck studios form</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How can we help you?</h1>
+    </header>
+    <main>
+        <h2>Submit a service request beloe:</h2>
+        <form id="survey-form">
+
+            <!-- ShortAnswer -->
+            <div class=short-answer">
+                <legend>How can we reach you?</legend>
+                <label id="name-label">Enter your First and Last Name:<input required id="name" type="text" placeholder="Enter your name">
+                </label>
+                <label id="email-label">Enter Your Email:<input required id="email" type="email" placeholder="Enter your email">
+                </label>
+                <label id="phone-label">Enter Your Phone-Number:<input required id="phone" type="tel" placeholder="Enter your phone number"></label>
+            </div>
+
+            <!-- MultipleChoice -->
+            <div class="multiple-choice">
+                <legend>Which catregory best represents what this will be used for?</legend>
+                <label for="business">Business<input id="business" type="radio" name="category" value="business" checked /> 
+                </label>
+                <label for="personal">Personal Use<input id="personal" type="radio" name="category" value="personal" /> 
+                </label>
+                <label for="school">School<input id="school" type="radio" name="category" value="school" /> 
+                </label>
+            </div>
+      
+            <!-- Checkboxes -->
+            <div class="checkbox">
+                <legend>What type of service would you like:</legend>
+                <input type="checkbox" id="serivce1" name="serivce1" value="ui-ux">
+                <label for="lang1">Custom UI/UX Design</label>
+                <input type="checkbox" id="serivce2" name="serivce2" value="front-end">
+                <label for="lang2">Front-End Development</label>
+                <input type="checkbox" id="serivce3" name="serivce3" value="back-end">
+                <label for="lang3">Back-end Development</label>
+                <input type="checkbox" id="serivce4" name="serivce4" value="search-engine">
+                <label for="lang4">Search Engine Optimizaiton</label>
+                <input type="checkbox" id="serivce5" name="serivce5" value="hosting">
+                <label for="lang5">Website Hosting</label>
+                <input type="checkbox" id="serivce6" name="serivce6" value="domain-registration">
+                <label for="lang5">Domain Registration</label>
+            </div>
+      
+            <!-- TextArea -->
+            <div class="textarea">
+                <legend>We'd like to hear more about your ideas! Please share as many detaisl as possible so we can better understand your vision!</legend>
+                <label for="details">
+                <textarea id="details" name="details" rows="3" cols="30" placeholder="How can we help you?" ></textarea>
+                </label>
+            </div>
+      
+            <!-- Submit Button -->
+            <input id="submit" type="submit" value="Submit" />
+
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <a href="./">Home Page</a>
+        </nav>
+    </footer>
+</body>
+</html>
