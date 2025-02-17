@@ -19,7 +19,7 @@ h2 {
 
 p {
     font-size: 18px;
-    color: #6B6E70;
+    color: #C7D59F; 
 }
 
 nav {
@@ -43,13 +43,13 @@ figcaption {
 }
 
 b {
-    color:#949494;
+    color:#DADDD8;
     font-weight: 900;
     text-align: start;
 }
 
 li {
-    color:#6B6E70;
+    color:#949494;
     text-align: start;
     padding: 10px;
 }
@@ -77,11 +77,15 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: #6B6E70 ;
 }
 
 a:visited {
-    color: white;
+    color: white ;
+}
+
+a:visited:hover {
+    color: #6B6E70;
 }
 
 figure {
