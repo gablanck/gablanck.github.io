@@ -6,8 +6,158 @@
     <script src="../scripts/scripts.js"></script>
     <title>gablanck studios form</title>
     <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        body {
+            background-color: #E1E5EE;
+            color: #2A324B;
+            line-height: 1.6;
+            padding: 20px;
+        }
+    
+        header, footer {
+            background-color: #2A324B;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    
+        h1 {
+            font-size: 2rem;
+        }
+    
+        main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(42, 50, 75, 0.2);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+    
+        h2 {
+            color: #2A324B;
+            margin-bottom: 20px;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        fieldset {
+            border: 2px solid #C7CCDB;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    
+        legend {
+            font-weight: bold;
+            color: #767B91;
+            padding: 0 10px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: #2A324B;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #C7CCDB;
+            border-radius: 4px;
+            background-color: #E1E5EE;
+            color: #2A324B;
+            transition: border-color 0.3s;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea:focus {
+            border-color: #F7C59F;
+            outline: none;
+        }
+    
+        .multiple-choice label,
+        .checkbox label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+    
+        .multiple-choice input,
+        .checkbox input {
+            margin-right: 8px;
+        }
+    
+        textarea {
+            resize: vertical;
+        }
+    
+        #submit {
+            background-color: #F7C59F;
+            color: #2A324B;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+    
+        #submit:hover {
+            background-color: #E1E5EE;
+            color: #2A324B;
+            border: 1px solid #F7C59F;
+        }
+    
+        nav a {
+            color: #F7C59F;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        nav a:hover {
+            text-decoration: underline;
+        }
 
+        .home-button {
+            background-color: #F7C59F;
+            color: #2A324B;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #E1E5EE;
+            color: #2A324B;
+            border: 1px solid #F7C59F;
+        }
+    
     </style>
+    
 </head>
 <body>
     <header>
@@ -79,7 +229,7 @@
     </main>
     <footer>
         <nav>
-            <a href="./">Home Page</a>
+            <button onclick="window.location.href='./';" class="home-button">Home Page</button>
         </nav>
     </footer>
 </body>
