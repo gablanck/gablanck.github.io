@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hobby Page</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0D1821;
+      color: #F0F4EF;
+    }
+
+    header {
+      background-color: #344966;
+      color: #F0F4EF;
+      padding: 16px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    nav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #F0F4EF;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 4px;
+      background-color: #B4CDED;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #BFCC94;
+      color: #0D1821;
+    }
+
+    main {
+      width: 960px;
+      margin: 0 auto;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+
+    section {
+      display: none;
+      margin-bottom: 32px;
+      border: 2px solid #B4CDED;
+      padding: 24px;
+      border-radius: 10px;
+      background-color: #344966;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-top: 0;
+      color: #BFCC94;
+    }
+
+    figure {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 600px;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #BFCC94;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #F0F4EF;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #344966;
+      padding: 16px;
+      color: #F0F4EF;
+    }
+
+    footer a {
+      color: #B4CDED;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #BFCC94;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    table, th, td {
+      border: 1px solid #B4CDED;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    form {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea, form button {
+      margin-bottom: 16px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    form input, form textarea {
+      background-color: #F0F4EF;
+      color: #0D1821;
+    }
+
+    form button {
+      background-color: #BFCC94;
+      color: #0D1821;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #B4CDED;
+      color: #0D1821;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .home-img {
+      width: 480px;
+      height: auto;
+    }
+
+    @media (max-width: 1024px) {
+      main {
+        width: 90%;
+      }
+
+      figure img {
+        width: 100%;
+      }
+
+      .home-img {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    window.onload = function() {
+      showSection('home');
+    };
+  </script>
+  <script src="../scripts/scripts.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Flying & Taking Pictures with Drones</h1>
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About Me</a>
+      <a href="#" onclick="showSection('best-times')">Best Times</a>
+      <a href="#" onclick="showSection('best-locations')">Best Locations</a>
+      <a href="#" onclick="showSection('how')">How</a>
+      <a href="#" onclick="showSection('why')">Why</a>
+      <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to my hobby site! Flying drones and taking aerial pictures is a hobby of mine. I mainly take pictures of landscapes but am open to everything else.</p>
+      <p>Here, I'll show some of the things I have done. From the best pictures I have taken to the best places to take pictures and why this hobby is so rewarding.</p>
+      <figure>
+        <img class="home-img" src="images/AI-drone.webp" alt="Ai genrated image of a drone">
+        <figcaption>A realistic generated image of a drone</figcaption>
+      </figure>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a frequent drone pilot and photographer with about 4 years of experience. This started as I have always found drones interesting and love the outdoors.</p>
+      <p>I mainly take photos of landscapes but am open to anything else. I have even taken pictures of houses to help a realtor.</p>
+      <p>This hobby doesn't require much to get started, just a passion for it! Take me, for example: I don't have the most advanced drone, but I'm still able to fully enjoy flying and take amazing photos.</p>
+      <p>Looking towards the future I plan on getting a drone certification in order to be able to fly in more locations and to sell my photos.</p>
+      <figure>
+        <img src="images/my-drone.JPG" alt="Personal Drone">
+        <figcaption>My drone</figcaption>
+      </figure>
+    </section>
+
+    <!-- Best Times Section -->
+    <section id="best-times">
+      <h2>Best Times</h2>
+      <p>Any time is a great time to fly a drone! Whether it's during the spring, summer, fall or winter. Each season and time of day offers unique opportunities for capturing stunning aerial shots!</p>
+      <p>Just be careful when flying on top of mountains due to high winds and always watch out for rain as it can break the drone.</p>
+      <figure>
+        <img src="images/sunset.JPG" alt="Pic of a sunset">
+        <figcaption>The sunset in Boone, NC</figcaption>
+        <img src="images/sunrise.JPG" alt="Pic of a sunrise">
+        <figcaption>The sunrise in Boone, NC</figcaption>
+        <img src="images/winter.JPG" alt="snow">
+        <figcaption>Last time it snowed in NC</figcaption>
+      </figure>
+    </section>
+
+    <!-- Best Locations Section -->
+    <section id="best-locations">
+      <h2>Best Locations</h2>
+      <p>Some of my favorite locations for drone photography are coastlines, urban skylines, lakes and mountains. Open fields and forests also offer breathtaking aerial views.</p>
+      <p>Be sure to follow local laws and regulations regarding drone flights in these areas.</p>
+      <p>Here are a couple of my favorite pictures:</p>
+      <figure>
+        <img src="images/jordan-lake.JPG" alt="Pic of jordan lake">
+        <figcaption>Flying over Jordan Lake</figcaption>
+        <img src="images/mountains(montana).JPG" alt="Pic of mountains in Montana">
+        <figcaption>On top of a mountain in Montana</figcaption>
+        <img src="images/mountains(wyoming).JPG" alt="Pic of mountains in Wyoming">
+        <figcaption>A mountain range in Wyoming</figcaption>
+        <img src="images/port(seattle).JPG" alt="port">
+        <figcaption>Port in Seattle</figcaption>
+      </figure>
+    </section>
+
+    <!-- How Section -->
+    <section id="how">
+      <h2>How</h2>
+      <p>Getting started with drones is easier than ever! Start with a beginner-friendly model, take time to learn flight controls, and always practice safety measures.</p>
+      <p>From experience DJI drones are user friendly and have models for all budgets and skill levels.</p>
+      <figure>
+        <img src="images/controller.jpg" alt="Drone controller">
+        <figcaption>Drone controller</figcaption>
+        <img src="images/dji-mini-se.webp" alt="Personal Drone">
+        <figcaption>My personal drone - DJI Mini SE</figcaption>
+      </figure>
+      <p><em>Prompt used: "Photorealistic image of a person holding a drone controller with a screen displaying live video footage from the drone."</em></p>
+    </section>
+
+    <!-- Why Section -->
+    <section id="why">
+      <h2>Why</h2>
+      <p>Drone flying combines technology with creativity. It creates unique perspectives of the world that are impossible to achieve with regular photography.</p>
+      <p>This hobby also promotes learning, exploration, and the joy of capturing breathtaking visuals from above.</p>
+      <figure>
+        <img src="images/drones.png" alt="drone models">
+        <figcaption>DJI Drone models</figcaption>
+        <img src="images/cool-drone.webp" alt="Cool drone pic">
+        <figcaption>DJI Drone models</figcaption>
+      </figure>
+    </section>
+
+    <!-- AI Prompts Section -->
+    <section id="ai-prompts">
+      <h2>AI Prompts</h2>
+      <p>Here are all the AI prompts I used to desgin this website:</p>
+      <ul>
+        <li>"How do implement multiple pages on a single HTML file give me examples"</li>
+        <li>"Generate a picture of a realistic drone with a cool and realistic landscape in the back"</li>
+        <li>"Using this code: (pasted code) and these colors: (pasted colors) format it using css so it looks good"</li>
+        <li>"With this edited code change the size of the images as the one in the home page is too big and I don't like the way they look in Best Times and Best Locations"</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Return to <a href="../">Main Page</a></p>
+    <p>Page built by <a href="../giantshark.com/">Giant Shark INC </a>&copy; 2025
+  </footer>
+
+</body>
+</html>
