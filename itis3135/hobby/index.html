@@ -23,7 +23,7 @@
       box-sizing: border-box;
     }
 
-    header h1 {
+    h1 {
       margin: 0;
       font-size: 40px;
     }
@@ -182,7 +182,9 @@
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('main section');
-      sections.forEach(section => section.classList.remove('active'));
+      sections.forEach((sectio) => {
+        section.classList.remove('active');
+      });
       document.getElementById(sectionId).classList.add('active');
     }
 
@@ -241,8 +243,12 @@
       <figure>
         <img src="images/sunset.JPG" alt="Pic of a sunset">
         <figcaption>The sunset in Boone, NC</figcaption>
+      </figure>
+      <figure>
         <img src="images/sunrise.JPG" alt="Pic of a sunrise">
         <figcaption>The sunrise in Boone, NC</figcaption>
+      </figure>
+      <figure>
         <img src="images/winter.JPG" alt="snow">
         <figcaption>Last time it snowed in NC</figcaption>
       </figure>
@@ -257,10 +263,15 @@
       <figure>
         <img src="images/jordan-lake.JPG" alt="Pic of jordan lake">
         <figcaption>Flying over Jordan Lake</figcaption>
+      <figure>
         <img src="images/mountains(montana).JPG" alt="Pic of mountains in Montana">
         <figcaption>On top of a mountain in Montana</figcaption>
+      </figure>
+      <figure>
         <img src="images/mountains(wyoming).JPG" alt="Pic of mountains in Wyoming">
         <figcaption>A mountain range in Wyoming</figcaption>
+      </figure>
+      <figure>
         <img src="images/port(seattle).JPG" alt="port">
         <figcaption>Port in Seattle</figcaption>
       </figure>
@@ -274,6 +285,8 @@
       <figure>
         <img src="images/controller.jpg" alt="Drone controller">
         <figcaption>Drone controller</figcaption>
+      </figure>
+      <figure>
         <img src="images/dji-mini-se.webp" alt="Personal Drone">
         <figcaption>My personal drone - DJI Mini SE</figcaption>
       </figure>
@@ -287,7 +300,9 @@
       <p>This hobby also promotes learning, exploration, and the joy of capturing breathtaking visuals from above.</p>
       <figure>
         <img src="images/drones.png" alt="drone models">
-        <figcaption>DJI Drone models</figcaption>
+        <figcaption>DJI Drone models</figcaption>\
+      </figure>
+      <figure>
         <img src="images/cool-drone.webp" alt="Cool drone pic">
         <figcaption>DJI Drone models</figcaption>
       </figure>
