@@ -66,11 +66,12 @@
       background-color: #344966;
     }
 
-    section.active {
+    .active {
       display: block;
     }
+    
 
-    section h2 {
+    h2 {
       font-size: 32px;
       margin-top: 0;
       color: #BFCC94;
@@ -86,6 +87,7 @@
       height: auto;
       border-radius: 10px;
       border: 3px solid #BFCC94;
+      box-sizing: border-box;
     }
 
     figcaption {
@@ -160,8 +162,8 @@
     }
 
     .home-img {
-      width: 480px;
-      height: auto;
+      width: 594px;
+      height: 594px;
     }
   
     @media (max-width: 1024px) {
@@ -198,7 +200,7 @@
 
   <main>
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="active">
       <h2>Home</h2>
       <p>Welcome to my hobby site! Flying drones and taking aerial pictures is a hobby of mine. I mainly take pictures of landscapes but am open to everything else.</p>
       <p>Here, I'll show some of the things I have done. From the best pictures I have taken to the best places to take pictures and why this hobby is so rewarding.</p>
@@ -216,7 +218,7 @@
       <p>This hobby doesn't require much to get started, just a passion for it! Take me, for example: I don't have the most advanced drone, but I'm still able to fully enjoy flying and take amazing photos.</p>
       <p>Looking towards the future I plan on getting a drone certification in order to be able to fly in more locations and to sell my photos.</p>
       <figure>
-        <img src="images/my-drone.JPG" alt="Personal Drone">
+        <img src="images/my-drone.jpg" alt="Personal Drone">
         <figcaption>My drone</figcaption>
       </figure>
     </section>
@@ -274,7 +276,7 @@
         <figcaption>Drone controller</figcaption>
       </figure>
       <figure>
-        <img src="images/dji-mini-se.webp" alt="Personal Drone">
+        <img src="images/dji-mini-se.webp" alt="dji mini se">
         <figcaption>My personal drone - DJI Mini SE</figcaption>
       </figure>
       <p><em>Prompt used: "Photorealistic image of a person holding a drone controller with a screen displaying live video footage from the drone."</em></p>
