@@ -163,9 +163,7 @@
       width: 480px;
       height: auto;
     }
-
-    
-
+  
     @media (max-width: 1024px) {
       main {
         width: 90%;
@@ -181,32 +179,8 @@
     }
   </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('nav a');
-
-      function showSection(id) {
-        sections.forEach(section => {
-          if (section.id === id) {
-            section.classList.add('active');
-          } else {
-            section.classList.remove('active');
-          }
-        });
-      }
-      navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); 
-          const sectionId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
-          showSection(sectionId);
-        });
-      });
-
-      showSection('home');
-    });
-  </script>
   <script src="../scripts/scripts.js"></script>
+  <script src="../scripts/hobby-scripts.js"></script>
 </head>
 
 <body>
@@ -276,6 +250,7 @@
       <figure>
         <img src="images/jordan-lake.JPG" alt="Pic of jordan lake">
         <figcaption>Flying over Jordan Lake</figcaption>
+      </figure>
       <figure>
         <img src="images/mountains(montana).JPG" alt="Pic of mountains in Montana">
         <figcaption>On top of a mountain in Montana</figcaption>
