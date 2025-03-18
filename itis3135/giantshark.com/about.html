@@ -6,85 +6,133 @@
     <script src="../scripts/scripts.js"></script>
     <title>Giant Shark About Page</title>
     <style>
-        html {
-            width: 80%;
-        }
+        /* General Page Layout */
+html {
+    width: 80%;
+    margin: 0 auto; /* Centers content horizontally */
+}
 
-        body {
-            background-color: #4E778F;
-            color: #F5F8F8;
-        }
+body {
+    background-color: #4E778F; /* Blue-gray background */
+    color: #F5F8F8;            /* Light text for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        li {
-            padding-bottom: 10px;
-        }
-        
-        ul {
-            margin-bottom: 90px;
-        }
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid #2A2E31; /* Dark separator line */
+}
 
-        nav {
-            text-align: center;
-        }
-        
-        a {
-            font-size: 20px;
-            color: #2A2E31;
-        }
+.icon {
+    width: 80px;
+    height: 60px;
+}
 
-        a:hover {
-            color: white;
-        }
+.title {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Cursive', sans-serif;
+    color: #1C2022; /* Darker text for title */
+}
 
-        a:active {
-            color: white;
-        }
+/* Footer Styling */
+footer {
+    border-top: 2px solid #2A2E31;
+    padding: 20px 0;
+    margin-top: 60px;
+    text-align: center;
+}
 
-        a:visited {
-            color: #2A2E31;
-        }
+footer nav a {
+    font-size: 18px;
+    color: #2A2E31;
+    margin: 0 10px;
+    text-decoration: none;
+}
 
-        a:visited:hover {
-            color: white;
-        }
+footer nav a:hover,
+footer nav a:active {
+    color: white;
+}
 
-        .icon {
-            width: 80px;
-            height: 60px;
-        }
+footer nav a:visited {
+    color: #2A2E31;
+}
 
-        header {
-            display: flex;
-            gap: 15px;
-            padding-bottom: 10;
-        }
+footer nav a:visited:hover {
+    color: white;
+}
 
-        .title {
-            margin: 0;
-            padding: 0;
-            font-size: 48px;
-            font-family: cursive;
-            color: #1C2022;
-        }
+/* Navigation Links (also used inside the page) */
+a {
+    font-size: 20px;
+    color: #2A2E31;
+    text-decoration: none;
+}
 
-        .slogan {
-            font-size: 30px;
-            margin-top: 5px;
-            margin-bottom: 50px;            
-        }
+a:hover,
+a:active {
+    color: white;
+}
 
-        h2 {
-            font-size: 25px;
-        }
+a:visited {
+    color: #2A2E31;
+}
 
-        .intro {
-            font-size: 20px;
-        }
+a:visited:hover {
+    color: white;
+}
 
-        .mission-statement {
-            text-align: left;
-            margin-bottom: 90px;
-        }
+/* Slogan */
+.slogan {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #F5F8F8;
+}
+
+/* Headings */
+h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #F5F8F8;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 90px;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+/* Paragraphs */
+.intro {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.mission-statement {
+    text-align: left;
+    margin-bottom: 90px;
+}
+
+/* Optional Enhancements */
+a,
+footer nav a {
+    transition: color 0.3s ease;
+}
+
         
 
     </style>

@@ -85,17 +85,42 @@
                 text-align: left;
             }
 
+            header {
+                background-color: #2A324B;
+                color: #F7C59F;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+
+            header .icon {
+                width: 100px; /* Adjusted image size */
+                height: auto;
+                border-radius: 50%; /* This makes the image round */
+                object-fit: cover;
+            }
+
+            header h1 {
+                font-size: 40px;
+                color: #F7C59F;
+                font-family: Courier;
+                margin: 0;
+                margin-left: 15px; /* Adjusted for space between image and text */
+                order: 1; /* Makes the text appear after the image */
+            }
+
         </style>
         <script src="../scripts/scripts.js"></script>
     </head>
     <body>
         <header>
             <h1>GaBlanck Studios</h1>
-            <p>ITIS 3135 Project</p>
-            <img src="../images/Designlogo.png" alt="Icon" class="icon">
+            <img src="../images/Designlogo.png" alt="logo" class="icon">
         </header>
+        <hr>
         <main>
-            <h2>Home Page</h2>
+            <h2>ITIS 3135 Project || Home Page</h2>
             <h3>Providing WebDev and Design Services</h3>
             <p class="main">Gablanck Studios is an innovative web development and design brand who's main mission is to make high-performnace
                 digitital experiences with out of this world visuals. Specializing in modern web solutions, and UI/UX design, 
@@ -116,7 +141,7 @@
         </main>
         <footer>
             <hr>
-            <p>Page built by <a href="giantshark.com/">Giant Shark INC </a>&copy; 2025 || 
+            <p>Page built by <a href="../giantshark.com/">Giant Shark INC </a>&copy; 2025 || 
                 <i>Certified in</i> 
                 <a href="https://www.freecodecamp.org/certification/gabriel_blanck/responsive-web-design">
                     <i>Responsive Web Design</i>
