@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script src="scritps/scripts.js"></script>
+    <style>
+        :root {
+            --dark-bg: #161925;
+            --dark-blue: #23395b;
+            --medium-blue: #406e8e;
+            --light-blue: #8ea8c3;
+            --lightest-blue: #cbf7ed;
+            --highlight: #F1F1F1;
+            --highlight-dark: #4F6D7A;
+            --footer-link: #8ea8c3;
+            --footer-link-hover: #cbf7ed;
+        }
+
+        html {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        body {
+            background-color: var(--light-blue);
+            color: var(--dark-bg);
+            line-height: 1.6;
+            padding: 20px;
+        }
+    
+        header, footer {
+            background-color: var(--dark-bg);
+            color: var(--highlight);
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    
+        h1 {
+            font-size: 2rem;
+        }
+    
+        main {
+            background-color: var(--highlight);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+    
+        h2 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        fieldset {
+            border: 2px solid var(--medium-blue);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    
+        legend {
+            font-weight: bold;
+            color: var(--highlight-dark);
+            padding: 0 10px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 10px;
+            border: 1px solid var(--medium-blue);
+            border-radius: 4px;
+            background-color: var(--lightest-blue);
+            color: var(--dark-bg);
+            transition: border-color 0.3s;
+        }
+    
+        input:focus,
+        textarea:focus {
+            border-color: var(--highlight-dark);
+            outline: none;
+        }
+    
+        .multiple-choice label,
+        .checkbox label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+    
+        textarea {
+            resize: vertical;
+        }
+    
+        #submit {
+            background-color: var(--medium-blue);
+            color: var(--highlight);
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+    
+        #submit:hover {
+            background-color: var(--highlight-dark);
+            color: var(--highlight);
+        }
+    
+        nav a {
+            color: var(--footer-link);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        nav a:hover {
+            text-decoration: underline;
+            color: var(--footer-link-hover);
+        }
+
+        footer a {
+            color: var(--footer-link);
+            text-decoration: none;
+        }
+    
+        footer a:hover {
+            color: var(--footer-link-hover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form for Giant Shark</h1>
+        <nav>
+            <p><a href="index.html">Home</a> ~ <a href="tables.html">Tables</a></p>
+        </nav>
+    </header>
+        
+    <main>
+        <h2>Submit Your Information</h2>
+        <form id="survey-form">
+            <!-- ShortAnswer -->
+            <fieldset>
+                <legend>How can we reach you?</legend>
+                <div class="short-answer">
+                    <label id="name-label">Enter your First and Last Name:<input required id="name" type="text" placeholder="Enter your name">
+                    </label>
+                    <label id="email-label">Enter Your Email:<input required id="email" type="email" placeholder="Enter your email">
+                    </label>
+                    <label id="phone-label">Enter Your Phone-Number:<input required id="phone" type="tel" placeholder="Enter your phone number">
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- MultipleChoice -->
+            <fieldset>
+                <legend>Have you shoped with us before?</legend>
+                <div class="multiple-choice">
+                    <label for="business">Yes<input id="yes" type="radio" name="category" value="yes" checked> 
+                    </label>
+                    <label for="personal">No<input id="no" type="radio" name="category" value="no"> 
+                    </label>
+                </div>
+            </fieldset>
+      
+            <!-- Checkboxes -->
+            <fieldset>
+                <legend>What type of Product are you looking for?</legend>
+                <div class="checkbox">
+                    <input type="checkbox" id="product1" name="product1" value="ui-ux">
+                    <label for="serivce1">Diving Gear</label>
+                    <input type="checkbox" id="product2" name="product2" value="front-end">
+                    <label for="serivce2">Durable Backpacks</label>
+                    <input type="checkbox" id="product3" name="product3" value="back-end">
+                    <label for="serivce3">Waterproof Watches</label>
+                </div>
+            </fieldset>
+
+            <!-- Dropdown -->
+            <fieldset>
+                <legend>What is your type of adventure?</legend>
+                <label for="adventure">Adventure:</label>
+                <select id="adventure" name="adventure" required>
+                    <option value="">Select a department</option>
+                    <option value="diving">Diving</option>
+                    <option value="hiking">Hiking</option>
+                </select>
+            </fieldset>
+      
+            <!-- TextArea -->
+            <fieldset>
+                <legend>Please let us know how we can help you further:</legend>
+                <div class="textarea">
+                    <label for="details">
+                    <textarea id="details" name="details" rows="3" cols="30" placeholder="How can we help you?" ></textarea>
+                    </label>
+                </div>
+            </fieldset>
+      
+            <!-- Submit / Reset Buttons -->
+            <input id="submit" type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+
+    <footer>
+        <p>Page built by <a href="giantshark.com/">Giant Shark INC</a> &copy; 2025 || 
+            <i>Certified in</i> 
+            <a href="https://www.freecodecamp.org/certification/gabriel_blanck/responsive-web-design">
+                <i>Responsive Web Design</i>
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
