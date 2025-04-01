@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables</title>
+        <script src="scritps/scripts.js"></script>
+        <style>
+            /* Color scheme */
+            :root {
+                --dark-bg: #161925;
+                --dark-blue: #23395b;
+                --medium-blue: #406e8e;
+                --light-blue: #8ea8c3;
+                --lightest-blue: #cbf7ed;
+                --highlight: #F1F1F1; /* Light background for readability */
+                --highlight-dark: #4F6D7A; /* Slightly darker blue for contrast */
+                --footer-link: #8ea8c3; /* Color for footer links */
+                --footer-link-hover: #cbf7ed; /* Hover color for footer links */
+            }
+    
+            /* General styling */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: var(--dark-bg);
+                color: var(--highlight);
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            /* Header styling */
+            header {
+                background-color: var(--dark-blue);
+                color: var(--highlight);
+                padding: 20px 0;
+                text-align: center;
+            }
+    
+            /* Navigation menu */
+            nav ul {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+                background-color: var(--medium-blue);
+                margin: 0;
+            }
+    
+            nav ul li {
+                display: inline;
+                margin: 0 15px;
+            }
+    
+            nav ul li a {
+                color: var(--highlight);
+                text-decoration: none;
+                font-weight: bold;
+            }
+    
+            nav ul li a:hover {
+                color: var(--lightest-blue);
+            }
+    
+            /* Main content styling */
+            main {
+                padding: 20px;
+                flex: 1; /* Ensures main content area grows to fill space */
+            }
+    
+            h2, h3 {
+                color: var(--lightest-blue);
+            }
+    
+            ol {
+                padding-left: 20px;
+            }
+    
+            /* Table styling */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                background-color: var(--highlight-dark);
+            }
+    
+            table, th, td {
+                border: 1px solid var(--highlight);
+            }
+    
+            th, td {
+                padding: 10px;
+                text-align: left;
+                color: var(--highlight); /* Ensuring text contrast */
+            }
+    
+            table th {
+                background-color: var(--dark-blue);
+                color: var(--highlight);
+            }
+    
+            /* Alternating row colors */
+            table tr:nth-child(odd) {
+                background-color: var(--medium-blue);
+            }
+    
+            table tr:nth-child(even) {
+                background-color: var(--highlight-dark);
+            }
+    
+            /* Styling for figure */
+            figure {
+                margin-top: 20px;
+            }
+    
+            figure figcaption {
+                color: var(--lightest-blue);
+                text-align: center;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+    
+            /* Footer styling */
+            footer {
+                background-color: var(--dark-blue);
+                color: var(--highlight);
+                text-align: center;
+                padding: 10px 0;
+            }
+    
+            footer a {
+                color: var(--footer-link);
+                text-decoration: none;
+            }
+    
+            footer a:hover {
+                color: var(--footer-link-hover);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Employee Information</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    
+        <main>
+            <h2>Employee Data Tables</h2>
+            
+            <h3>My Tabular Data</h3>
+            <ol>
+                <li>Gabriel Schulze-Blanck - gschulze@uncc.edu - 15 years</li>
+                <li>John Smith - john.smith@gmail.com - 15 years</li>
+                <li>Alice Johnson - alice.johnson@email.com - 8 years</li>
+                <li>David Brown - david.brown@gmail.com - 12 years</li>
+                <li>Emma White - emma.white@email.com - 3 years</li>
+                <li>Michael Davis - michael.davis@yahoo.com - 6 years</li>
+                <li>Sophia Martinez - sophia.martinez@email.com - 10 years</li>                   
+                <li>James Anderson - james.anderson@yahoo.com - 4 years</li>                  
+            </ol>
+    
+            <h3>Employee Data in Simple Table</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+                <tr>
+                    <td>Gabriel Schulze-Blanck</td>
+                    <td>gschulze@uncc.edu</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>John Smith</td>
+                    <td>john.smith@gmail.com</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Alice Johnson</td>
+                    <td>alice.johnson@email.com</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>David Brown</td>
+                    <td>david.brown@gmail.com</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Emma White</td>
+                    <td>emma.white@email.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Michael Davis</td>
+                    <td>michael.davis@yahoo.com</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Sophia Martinez</td>
+                    <td>sophia.martinez@email.com</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>James Anderson</td>
+                    <td>james.anderson@yahoo.com</td>
+                    <td>4</td>
+                </tr>
+            </table>
+    
+            <h3>Employee Data in Complex Table</h3>
+            <figure>
+                <figcaption>Employee Information</figcaption>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Monthly Salary</th>
+                    </tr>
+                    <tr>
+                        <td>Owner</td>
+                        <td>Gabriel Schulze-Blanck</td>
+                        <td>gschulze@uncc.edu</td>
+                        <td>$200,000</td>
+                    </tr>
+                    <tr>
+                        <td>Boss</td>
+                        <td>John Smith</td>
+                        <td>john.smith@gmail.com</td>
+                        <td>$95,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Managers</td>
+                        <td>Alice Johnson</td>
+                        <td>alice.johnson@email.com</td>
+                        <td>$60,000</td>
+                    </tr>
+                    <tr>
+                        <td>David Brown</td>
+                        <td>david.brown@gmail.com</td>
+                        <td>$70,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Team Memebers</td>
+                        <td>Emma White</td>
+                        <td>emma.white@email.com</td>
+                        <td>$50,000</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Davis</td>
+                        <td>michael.davis@yahoo.com</td>
+                        <td>$55,000</td>
+                    </tr>
+                    <tr>
+                        <td>Sophia Martinez</td>
+                        <td>sophia.martinez@email.com</td>
+                        <td>$45,000</td>
+                    </tr>
+                    <tr>
+                        <td>James Anderson</td>
+                        <td>james.anderson@yahoo.com</td>
+                        <td>$40,000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <td>73 years</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Monthly Salary</th>
+                        <td>$615,000</td>
+                    </tr>
+                </table>
+            </figure>
+        </main>
+        <footer>
+            <p>Page built by <a href="giantshark.com/">Giant Shark INC </a>&copy; 2025 || 
+                <i>Certified in</i> 
+                <a href="https://www.freecodecamp.org/certification/gabriel_blanck/responsive-web-design">
+                    <i>Responsive Web Design</i>
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>
