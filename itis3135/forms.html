@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
-    <script src="scritps/scripts.js"></script>
+    <script src="./scripts/scripts.js"></script>
     <style>
         :root {
             --dark-bg: #161925;
@@ -98,7 +98,7 @@
         input:focus,
         textarea:focus {
             border-color: var(--highlight-dark);
-            outline: none;
+            outline-color: var(--highlight-dark);
         }
     
         .multiple-choice label,
@@ -179,9 +179,9 @@
             <fieldset>
                 <legend>Have you shoped with us before?</legend>
                 <div class="multiple-choice">
-                    <label for="business">Yes<input id="yes" type="radio" name="category" value="yes" checked> 
+                    <label for="yes">Yes<input id="yes" type="radio" name="category" value="yes" checked> 
                     </label>
-                    <label for="personal">No<input id="no" type="radio" name="category" value="no"> 
+                    <label for="no">No<input id="no" type="radio" name="category" value="no"> 
                     </label>
                 </div>
             </fieldset>
@@ -191,11 +191,11 @@
                 <legend>What type of Product are you looking for?</legend>
                 <div class="checkbox">
                     <input type="checkbox" id="product1" name="product1" value="ui-ux">
-                    <label for="serivce1">Diving Gear</label>
+                    <label for="product1">Diving Gear</label>
                     <input type="checkbox" id="product2" name="product2" value="front-end">
-                    <label for="serivce2">Durable Backpacks</label>
+                    <label for="product2">Durable Backpacks</label>
                     <input type="checkbox" id="product3" name="product3" value="back-end">
-                    <label for="serivce3">Waterproof Watches</label>
+                    <label for="product3">Waterproof Watches</label>
                 </div>
             </fieldset>
 

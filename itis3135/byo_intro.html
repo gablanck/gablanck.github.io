@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/survey.css"> 
+    
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1 id="title">Build Your Own Introduction</h1>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label>Name: <input required id="name" type="text" placeholder="Enter your name" /></label>
+        <label>Mascot: <input required id="mascot" type="text" placeholder="Enter your mascot" /></label>
+        <label>Image Upload: <input required id="image" type="file" accept="image/png, image/jpeg" /></label>
+        <label>Image Caption: <input required id="image-caption" type="text" placeholder="Caption for your image" /></label>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Background Information</legend>
+        <label>Personal Background: <textarea required id="personal-bg" rows="3"></textarea></label>
+        <label>Professional Background: <textarea required id="professional-bg" rows="3"></textarea></label>
+        <label>Academic Background: <textarea required id="academic-bg" rows="3"></textarea></label>
+        <label>Background in Web Development: <textarea required id="webdev-bg" rows="3"></textarea></label>
+        <label>Primary Computer Platform: <input required id="platform" type="text" placeholder="Your computer platform" /></label>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Courses Currently Taking</legend>
+        <div id="courses-container"></div>
+        <button type="button" id="add-course" onclick="addCourseButton()">Add Course</button>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label>Funny thing?: <textarea id="funny" rows="2"></textarea></label>
+        <label>Anything else?: <textarea id="extra" rows="2"></textarea></label>
+      </fieldset>
+      
+      <fieldset>
+        <label><input type="checkbox" required> I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label>
+      </fieldset>
+      
+      <input id="submit" type="submit" value="Submit" />
+      <input id="reset" type="reset" value="Reset" />
+    </form>
+    <script src="scripts/survey.js" defer></script>
+  </body>
+</html>

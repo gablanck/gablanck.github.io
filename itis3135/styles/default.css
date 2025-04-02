@@ -140,57 +140,44 @@ figure {
     font-style: italic;
 }
 
-.laptop {
-    margin-bottom: 0px;
+.laptop, .tablet, .mobile {
+    display: none; /* Hide all views by default */
+    font-size: 16px; /* Adjust font size */
 }
-.tablet {
-    margin-top: 0;
-    height: 20px;
-    padding: -50px;
-}
-.mobile {
-    margin-bottom: 0;
-    height: 40px;
-    padding: -50px;
+
+.views {
+    padding-bottom: 10px;
 }
 
 @media screen and ( min-width: 981px ) {
     .laptop {
-        visibility: visible;
+        display: block; /* Show laptop view on large screens */
         color: white;
     }
-    .tablet {
-        visibility: hidden;
-    }
-    .mobile {
-        visibility: hidden;
+    .tablet, .mobile {
+        display: none; /* Hide tablet and mobile views */
     }
 }
-/* Rule Overrides For Tablet Devices */
-@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px ) {
     .tablet {
-        visibility: visible;
+        display: block; /* Show tablet view on medium screens */
         color: white;
     }
-    .mobile {
-        visibility: hidden;
-    }
-    .laptop {
-        visibility: hidden;
+    .laptop, .mobile {
+        display: none; /* Hide laptop and mobile views */
     }
 }
-/* Rule Overrides For Mobile Devices */
+
 @media screen and ( max-width: 600px ) {
     .mobile {
-        visibility: visible;
+        display: block; /* Show mobile view on small screens */
         color: white;
     }
-    .tablet {
-        visibility: hidden;
-    }
-    .laptop {
-        visibility: hidden;
+    .tablet, .laptop {
+        display: none; /* Hide tablet and laptop views */
     }
 }
+
 
 
