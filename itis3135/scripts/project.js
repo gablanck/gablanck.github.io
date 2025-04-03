@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       donateModal.style.display = "none";
   }
 
-  donationButtons.forEach(button => {
+  donationButtons.forEach((button) => {
       button.addEventListener("click", function () {
           customAmountInput.value = this.getAttribute("data-amount");
       });
