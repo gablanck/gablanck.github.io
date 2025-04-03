@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - GreenEarth Foundation</title>
+  <link rel="stylesheet" href="../styles/project.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="getinvolved.html">Get Involved</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="active">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="donate">
+    <h1>Support GreenEarth Foundation</h1>
+    <p>Your contribution helps us continue our mission to protect the environment.</p>
+    
+    <form id="donation-form" action="#" method="post">
+      <label for="donation-amount">Select Donation Amount:</label>
+      <div class="donation-options">
+        <button type="button" class="donate-btn" data-amount="10">$10</button>
+        <button type="button" class="donate-btn" data-amount="25">$25</button>
+        <button type="button" class="donate-btn" data-amount="50">$50</button>
+        <button type="button" class="donate-btn" data-amount="100">$100</button>
+      </div>
+    
+      <label for="custom-amount">Or Enter a Custom Amount:</label>
+      <input type="number" id="custom-amount" name="custom-amount" min="1" placeholder="Enter amount">
+    
+      <label for="payment-method">Select Payment Method:</label>
+      <select id="payment-method" name="payment-method">
+        <option value="credit-card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+      </select>
+    
+      <button type="submit" id="final-donate-btn" class="cta-btn">Donate Now</button>
+    
+      <div id="donate-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-donate-modal" class="close">&times;</span>
+          <h2>Thank you for your generosity!</h2>
+          <p>Your donation is greatly appreciated.</p>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GreenEarth Foundation</p>
+    <p>
+      <a href="https://facebook.com">Facebook</a> ~
+      <a href="https://twitter.com">Twitter</a> ~
+      <a href="https://instagram.com">Instagram</a>
+    </p>
+  </footer>
+
+  <script src="../scripts/project.js"></script>
+</body>
+</html>
