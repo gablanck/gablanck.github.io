@@ -65,6 +65,11 @@ a {
   color: white;
 }
 
+.intro-tag {
+  color: white;
+  text-align: center;
+}
+
 .cta-btn {
   background-color: #4caf50;
   color: white;
@@ -184,3 +189,25 @@ header nav ul li a {
   background-color: #45a049;
 }
 
+.outline-pic, .sitemap {
+  width: 70%;
+  height: auto;
+}
+
+.project-overview-header {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.page-name {
+  color: #2c6e49;
+}
+
+.outline {
+  width: 80%;
+}
+
+.pages li {
+  padding: 5px;
+}
