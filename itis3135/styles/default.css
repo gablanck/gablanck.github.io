@@ -179,5 +179,44 @@ figure {
     }
 }
 
-
+.slideshow-container {
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+  }
+  .slideshow-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .caption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+  }
+  .thumbs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .thumbs img {
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .thumbs img.active {
+    border-color: #333;
+  }
+  .nav-buttons {
+    margin-top: 15px;
+  }
+  .nav-buttons button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    font-size: 1em;
+  }
 

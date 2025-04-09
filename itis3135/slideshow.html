@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow - Gabriel</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <style>
+    
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <div data-include="components/slideshow_header.html"></div>
+  </header>
+
+  <main>
+    <h1>Gabriel's Image Slideshow</h1>
+    <div class="slideshow-container">
+      <img id="mainImage" class="slideshow-image" src="" alt="">
+      <div class="caption" id="captionText"></div>
+      <div class="nav-buttons">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+      <div class="thumbs" id="thumbnails"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div data-include="components/slideshow_footer.html"></div>
+  </footer>
+
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+
+      const slides = [
+        { letter: "G", word: "Ghost", file: "images/ghost.png" },
+        { letter: "A", word: "Astronaut", file: "images/astronaut.png" },
+        { letter: "B", word: "Ball", file: "images/ball.png" },
+        { letter: "R", word: "Road", file: "images/road.png" },
+        { letter: "I", word: "Igloo", file: "images/igloo.png" },
+        { letter: "E", word: "Eagle", file: "images/eagle.png" },
+        { letter: "L", word: "Laptop", file: "images/laptop.png" }
+      ];
+
+      let currentIndex = 0;
+
+      function updateSlide(index) {
+        const slide = slides[index];
+        $("#mainImage").attr("src", slide.file).attr("alt", slide.word);
+        $("#captionText").text(`${slide.letter} - for ${slide.word}`);
+        $(".thumbs img").removeClass("active");
+        $(`.thumbs img[data-index=${index}]`).addClass("active");
+      }
+
+      function buildThumbnails() {
+        slides.forEach((slide, idx) => {
+          const thumb = $(`<img src="${slide.file}" alt="${slide.word}" data-index="${idx}">`);
+          thumb.on("click", function () {
+            currentIndex = idx;
+            updateSlide(currentIndex);
+          });
+          $("#thumbnails").append(thumb);
+        });
+      }
+
+      $("#prevBtn").on("click", function () {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide(currentIndex);
+      });
+
+      $("#nextBtn").on("click", function () {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide(currentIndex);
+      });
+
+      buildThumbnails();
+      updateSlide(currentIndex);
+    });
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
