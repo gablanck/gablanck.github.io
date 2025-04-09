@@ -193,7 +193,7 @@ figure {
     margin-top: 10px;
     font-size: 1.2em;
     font-weight: bold;
-    color: white;
+    color: #86C232;
   }
   .thumbs {
     margin-top: 20px;
@@ -207,9 +207,10 @@ figure {
     height: 50px;
     cursor: pointer;
     border: 2px solid transparent;
+    box-sizing: border-box;
   }
-  .thumbs img.active {
-    border-color: #333;
+  .thumbs .active {
+    border-color: #dadada;
   }
   .nav-buttons {
     margin-top: 15px;
