@@ -58,3 +58,55 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 5000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contact-form");
+  
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+        
+        if (!name || !email || !message) {
+          alert("Please fill out all fields before submitting.");
+          event.preventDefault();
+        }
+      });
+    }
+  });
+  
+// Function to set up header and footer nav toggles
+function setupNavToggles() {
+    const headerToggle = document.getElementById('header-nav-toggle');
+    const headerLinks = document.getElementById('header-nav-links');
+    if (headerToggle && headerLinks) {
+      headerToggle.onclick = function() {
+        headerLinks.classList.toggle('show');
+      };
+    }
+  
+    const footerToggle = document.getElementById('footer-nav-toggle');
+    const footerLinks = document.getElementById('footer-nav-links');
+    if (footerToggle && footerLinks) {
+      footerToggle.onclick = function() {
+        footerLinks.classList.toggle('show');
+      };
+    }
+  }
+  
+

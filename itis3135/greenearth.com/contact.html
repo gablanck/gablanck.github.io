@@ -8,20 +8,8 @@
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="getinvolved.html">Get Involved</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html">Donate</a></li>
-      </ul>
-    </nav>
-  </header>
+  
+  <div id="header-placeholder"></div>
 
   <section class="contact">
     <h1>Contact Us</h1>
@@ -41,15 +29,36 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 GreenEarth Foundation</p>
-    <p>
-      <a href="https://facebook.com">Facebook</a> ~
-      <a href="https://twitter.com">Twitter</a> ~
-      <a href="https://instagram.com">Instagram</a>
-    </p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
-  <script src="../scripts/project.js"></script>
 </body>
+
+<script>
+  function loadHeaderFooter() {
+    fetch('dynamic_header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        setupNavToggles(); // After header is inserted
+      });
+
+    fetch('dynamic_footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+        setupNavToggles(); // After footer is inserted
+
+        // Set dynamic year (AFTER footer is inserted)
+        const year = new Date().getFullYear();
+        const copyrightElement = document.getElementById('copyright');
+        if (copyrightElement) {
+          copyrightElement.innerHTML = `&copy; ${year} GreenEarth Foundation`;
+        }
+      });
+  }
+
+  loadHeaderFooter();
+</script>
+<script src="../scripts/project.js"></script>
+
 </html>
