@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let slideIndex = 0;
-showSlides();
 
 function showSlides() {
   let slides = document.getElementsByClassName("slide");
@@ -68,10 +67,13 @@ function showSlides() {
     slides[i].style.display = "none";  
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {slideIndex = 1;}    
   slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 5000);
+  setTimeout(showSlides, 4000);
 }
+
+showSlides(); // ✅ Now it's called AFTER definition
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contact-form");

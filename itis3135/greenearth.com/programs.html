@@ -34,34 +34,33 @@
 
   <div id="footer-placeholder"></div>
 
+  <script>
+    function loadHeaderFooter() {
+      fetch('dynamic_header.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          setupNavToggles(); // After header is inserted
+        });
+  
+      fetch('dynamic_footer.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+          setupNavToggles(); // After footer is inserted
+  
+          // Set dynamic year (AFTER footer is inserted)
+          const year = new Date().getFullYear();
+          const copyrightElement = document.getElementById('copyright');
+          if (copyrightElement) {
+            copyrightElement.innerHTML = `&copy; ${year} GreenEarth Foundation`;
+          }
+        });
+    }
+  
+    loadHeaderFooter();
+  </script>
+  <script src="../scripts/project.js"></script>
+
 </body>
-
-<script>
-  function loadHeaderFooter() {
-    fetch('dynamic_header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        setupNavToggles(); // After header is inserted
-      });
-
-    fetch('dynamic_footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-        setupNavToggles(); // After footer is inserted
-
-        // Set dynamic year (AFTER footer is inserted)
-        const year = new Date().getFullYear();
-        const copyrightElement = document.getElementById('copyright');
-        if (copyrightElement) {
-          copyrightElement.innerHTML = `&copy; ${year} GreenEarth Foundation`;
-        }
-      });
-  }
-
-  loadHeaderFooter();
-</script>
-<script src="../scripts/project.js"></script>
-
 </html>
